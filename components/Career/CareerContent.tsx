@@ -5,6 +5,7 @@ import { ArrowRight, Clock, DollarSign, MapPin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { jobs, benefits, companyValues } from "@/data";
+import { toast } from "sonner";
 
 export default function CareerContent() {
   return (
@@ -20,8 +21,8 @@ export default function CareerContent() {
           Why Work With Us?
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-          At Suitmedia, we&apos;re more than just a team – we&apos;re a family of
-          innovators, creators, and problem-solvers who are passionate about
+          At Suitmedia, we&apos;re more than just a team – we&apos;re a family
+          of innovators, creators, and problem-solvers who are passionate about
           making a difference in the digital world.
         </p>
 
@@ -149,6 +150,12 @@ export default function CareerContent() {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        onClick={() =>
+                          toast("Application Submitted", {
+                            description:
+                              "Thank you for applying. We'll contact you soon!",
+                          })
+                        }
                         className="w-full lg:w-auto bg-brand-500 hover:bg-brand-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
                       >
                         Apply Now

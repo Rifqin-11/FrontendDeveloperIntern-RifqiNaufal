@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     "Explore fresh ideas and inspiring stories from the world of digital innovation.",
 };
 
-
 interface IdeasPageProps {
   searchParams: {
     page?: string;
