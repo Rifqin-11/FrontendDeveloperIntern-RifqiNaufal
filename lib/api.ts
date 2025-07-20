@@ -1,5 +1,7 @@
 import { IdeasApiResponse } from '@/types';
 
+const API_BASE_URL = 'https://suitmedia-backend.suitdev.com/api';
+
 export async function fetchIdeas(params: {
   page?: number;
   size?: number;
@@ -14,24 +16,21 @@ export async function fetchIdeas(params: {
     'page[size]': size.toString(),
     'sort': sortParam,
     'append[0]': 'small_image',
-    'append[1]': 'medium_image',
+    'append[1]': 'medium_image'
   });
 
-  const response = await fetch(
-    `https://suitmedia-backend.suitdev.com/api/ideas?${searchParams}`,
-    {
-      cache: 'no-store',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-    }
-  );
+  const response = await fetch(`${API_BASE_URL}/ideas?${searchParams}`, {
+    cache: 'no-store',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+  });
 
   if (!response.ok) {
     throw new Error(`API Error: ${response.status} ${response.statusText}`);
   }
 
-  const data: IdeasApiResponse = await response.json();
+  const data = await response.json();
   return data;
 }
