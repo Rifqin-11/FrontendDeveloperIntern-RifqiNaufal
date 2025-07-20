@@ -1,5 +1,10 @@
 import { LucideIcon } from "lucide-react";
 
+export interface ApiResponse<T = unknown> {
+  data: T;
+  meta?: ApiResponseMeta;
+}
+
 // === IDEAS ===
 export interface IdeaImage {
   id: string;
