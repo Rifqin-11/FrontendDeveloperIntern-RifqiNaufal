@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Zap, Users, Shield, BarChart3, CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 interface WhyChooseUsProps {
   benefitsData: string[];
@@ -104,13 +105,15 @@ export default function WhyChooseUs({ benefitsData }: WhyChooseUsProps) {
           >
             Get Free Consultation
           </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="border-2 border-brand-500 text-brand-500 hover:bg-brand-500 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors"
-          >
-            View Our Portfolio
-          </motion.button>
+          <Link href="/work">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-brand-500 text-brand-500 hover:bg-brand-500 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors"
+            >
+              View Our Portfolio
+            </motion.button>
+          </Link>
         </div>
       </motion.div>
     </>

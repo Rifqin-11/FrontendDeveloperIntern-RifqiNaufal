@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { aboutValues, team, milestones } from "@/data/index";
+import Link from "next/link";
 
 export default function AboutContent() {
   return (
@@ -161,13 +162,15 @@ export default function AboutContent() {
           We&#39;re always looking for talented individuals who share our
           passion for innovation and excellence.
         </p>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
-        >
-          View Open Positions
-        </motion.button>
+        <Link href="/careers">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
+          >
+            View Open Positions
+          </motion.button>
+        </Link>
       </motion.div>
     </div>
   );

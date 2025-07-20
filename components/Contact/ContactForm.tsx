@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { MessageCircle, Send, CheckCircle } from "lucide-react";
 import { services } from "@/data";
 import type { FormData } from "@/types";
-
+import { toast } from "sonner";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
@@ -45,8 +45,13 @@ export default function ContactForm() {
         service: "",
         message: "",
       });
+
+      toast("Message Sent", {
+        description: "Thank you for your message. We'll respond shortly.",
+      });
     }, 1000);
   };
+
 
   return (
     <motion.div
