@@ -98,13 +98,15 @@ export default function WhyChooseUs({ benefitsData }: WhyChooseUsProps) {
           drive success.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
-          >
-            Get Free Consultation
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
+            >
+              Get Free Consultation
+            </motion.button>
+          </Link>
           <Link href="/work">
             <motion.button
               whileHover={{ scale: 1.05 }}
