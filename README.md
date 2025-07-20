@@ -81,4 +81,4 @@ This project is developed as part of a private internship test. All rights reser
 **Rifqi Naufal**  
 Frontend Developer
 📧 rifqinaufal9009@gmail.com  
-🌐 [LinkedIn](https://linkedin.com/in/rifqinaufal) | [GitHub](https://github.com/Rifqin-11)
+🌐 [LinkedIn](https://linkedin.com/in/rifqin11) | [GitHub](https://github.com/Rifqin-11)
