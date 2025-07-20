@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import type { Metadata } from "next";
 import Banner from "@/components/Banner";
 import IdeaList from "@/components/Ideas/IdeaList";
